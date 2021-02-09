@@ -1,2 +1,9 @@
-FROM php:7.0-apache
-COPY . /var/www/html/
+FROM nginx:latest
+
+RUN rm /usr/share/nginx/html/index.html
+
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+
+
